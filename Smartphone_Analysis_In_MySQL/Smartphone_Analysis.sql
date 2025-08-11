@@ -1,64 +1,64 @@
- -- SELECT * FROM campusx.smartphones WHERE 1   -- 1 all rows 
+ SELECT * FROM campusx.smartphones WHERE 1   -- 1 all rows 
  
- -- SELECT model, price, rating FROM campusx.smartphones;
+ SELECT model, price, rating FROM campusx.smartphones;
  
- -- SELECT model, battery_capacity,os FROM campusx.smartphones;
+ SELECT model, battery_capacity,os FROM campusx.smartphones;
  
- -- SELECT os AS 'Operationg System',model, battery_capacity AS 'MAH' FROM campusx.smartphones; --it is known as alieas
+ SELECT os AS 'Operationg System',model, battery_capacity AS 'MAH' FROM campusx.smartphones; --it is known as alieas
  
- -- SELECT model, 
- -- SQRT(resolution_width * resolution_width + resolution_height * resolution_height)/ screen_size AS 'PPI'
- -- FROM campusx.smartphones; -- finding ppi
+ SELECT model, 
+ SQRT(resolution_width * resolution_width + resolution_height * resolution_height)/ screen_size AS 'PPI'
+ FROM campusx.smartphones; -- finding ppi
  
 
- -- SELECT model, rating/10 FROM campusx.smartphones;
+ SELECT model, rating/10 FROM campusx.smartphones;
  
- -- SELECT model, 'smartphone' AS 'type' FROM campusx.smartphones;
- -- if we want totype as anything then we can write with AS
+ SELECT model, 'smartphone' AS 'type' FROM campusx.smartphones;
+ if we want totype as anything then we can write with AS
  
- -- SELECT DISTINCT(brand_name) AS 'ALL brands' 
- -- FROM campusx.smartphones;
+ SELECT DISTINCT(brand_name) AS 'ALL brands' 
+ FROM campusx.smartphones;
  
- -- SELECT DISTINCT(processor_brand) AS 'all_processor'
- -- FROM campusx.smartphones;
+ SELECT DISTINCT(processor_brand) AS 'all_processor'
+ FROM campusx.smartphones;
  
---  SELECT DISTINCT(os) AS 'all_processor'
- -- FROM campusx.smartphones;
+ SELECT DISTINCT(os) AS 'all_processor'
+ FROM campusx.smartphones;
  
- -- SELECT DISTINCT brand_name, processor_brand 
- -- FROM campusx.smartphones;
+ SELECT DISTINCT brand_name, processor_brand 
+ FROM campusx.smartphones;
  
- -- SELECT * FROM campusx.smartphones
- -- WHERE brand_name='samsung'
+ SELECT * FROM campusx.smartphones
+ WHERE brand_name='samsung'
  
- -- SELECT * FROM campusx.smartphones
- -- WHERE price > 100000
+ SELECT * FROM campusx.smartphones
+ WHERE price > 100000
  
- -- SELECT * FROM campusx.smartphones
- -- WHERE price > 10000 AND price < 20000
+ SELECT * FROM campusx.smartphones
+ WHERE price > 10000 AND price < 20000
 
--- SELECT * FROM campusx.smartphones
--- WHERE price BEtWEEN 10000 AND 20000
+SELECT * FROM campusx.smartphones
+WHERE price BEtWEEN 10000 AND 20000
 
--- SELECT * FROM campusx.smartphones
--- WHERE price < 15000 AND rating > 80
+SELECT * FROM campusx.smartphones
+WHERE price < 15000 AND rating > 80
 
--- SELECT * FROM campusx.smartphones
--- WHERE price < 15000 AND rating > 80 AND processor_brand = 'snapdragon'
+SELECT * FROM campusx.smartphones
+WHERE price < 15000 AND rating > 80 AND processor_brand = 'snapdragon'
 
--- SELECT * FROM campusx.smartphones
--- WHERE brand_name = 'samsung' AND ram_capacity > 8
+SELECT * FROM campusx.smartphones
+WHERE brand_name = 'samsung' AND ram_capacity > 8
 
--- SELECT * FROM campusx.smartphones
--- WHERE brand_name = 'samsung' AND processor_brand = 'snapdragon'
+SELECT * FROM campusx.smartphones
+WHERE brand_name = 'samsung' AND processor_brand = 'snapdragon'
 
--- SELECT DISTINCT(brand_name) FROM campusx.smartphones
--- WHERE price > 150000
+SELECT DISTINCT(brand_name) FROM campusx.smartphones
+WHERE price > 150000
 
--- SELECT * FROM campusx.smartphones
--- WHERE processor_brand = 'exynos' OR 
--- processor_brand = 'snapdragon' OR 
---  processor_brand = 'bionic'
+SELECT * FROM campusx.smartphones
+WHERE processor_brand = 'exynos' OR 
+processor_brand = 'snapdragon' OR 
+ processor_brand = 'bionic'
 
 -- we can write upper query in easy ways 
 
@@ -74,55 +74,55 @@ WHERE processor_brand IN ('snapdragon', 'exynos' 'bionic') ;
  SET processor_brand  = 'dimensity'
  WHERE processor_brand = 'mediatek';
 
--- SELECT * FROM campusx.smartphones
--- WHERE processor_brand = 'mediatek'
+SELECT * FROM campusx.smartphones
+WHERE processor_brand = 'mediatek'
 
--- UPDATE campusx.camdata
--- SET email = 'manish@123', password = '234'
--- WHERE name = 'Manish'
+UPDATE campusx.camdata
+SET email = 'manish@123', password = '234'
+WHERE name = 'Manish'
 
--- DELETE FROM campusx.smartphones
--- WHERE price > 200000 -- for deleting 
--- for deleting smartphones which price is more than 200000
+DELETE FROM campusx.smartphones
+WHERE price > 200000 -- for deleting 
+for deleting smartphones which price is more than 200000
 
 -- for checking 
--- SELECT * FROM campusx.smartphones
--- WHERE price > 200000
+SELECT * FROM campusx.smartphones
+WHERE price > 200000
 
--- SELECT * FROM campusx.smartphones
--- WHERE primary_camera_rear > 150  AND brand_name = 'samsung'
+SELECT * FROM campusx.smartphones
+WHERE primary_camera_rear > 150  AND brand_name = 'samsung'
 
 -- aggregate function
--- SELECT MIN(price) FROM campusx.smartphones
--- SELECT MAX(price) FROM campusx.smartphones
+SELECT MIN(price) FROM campusx.smartphones
+SELECT MAX(price) FROM campusx.smartphones
 
--- SELECT MAX(price) FROM campusx.smartphones
--- WHERE brand_name = 'smasung'
+SELECT MAX(price) FROM campusx.smartphones
+WHERE brand_name = 'smasung'
 
--- SELECT * FROM campusx.smartphones
--- WHERE brand_name = 'samsung' AND price = 163980
+SELECT * FROM campusx.smartphones
+WHERE brand_name = 'samsung' AND price = 163980
 
--- SELECT AVG(rating) FROM campusx.smartphones
--- WHERE brand_name = 'sumsung'
+SELECT AVG(rating) FROM campusx.smartphones
+WHERE brand_name = 'sumsung'
 
--- SELECT SUM(price) FROM campusx.smartphones
+SELECT SUM(price) FROM campusx.smartphones
 
--- SELECT COUNT(*) FROM campusx.smartphones  -- kitne no. of phone 
--- WHERE brand_name = 'apple'
+SELECT COUNT(*) FROM campusx.smartphones  -- kitne no. of phone 
+WHERE brand_name = 'apple'
 
--- SELECT COUNT(DISTINCT(brand_name)) FROM campusx.smartphones;  -- 42 types different phones
+SELECT COUNT(DISTINCT(brand_name)) FROM campusx.smartphones;  -- 42 types different phones
 
--- for checking STD
--- SELECT STD(screen_size) FROM  campusx.smartphones;
--- SELECT VARIANCE(screen_size) FROM  campusx.smartphones;
+for checking STD
+SELECT STD(screen_size) FROM  campusx.smartphones;
+SELECT VARIANCE(screen_size) FROM  campusx.smartphones;
 
--- SELECT  ABS(price - 100000) AS  'temp' FROM campusx.smartphones
+SELECT  ABS(price - 100000) AS  'temp' FROM campusx.smartphones
 -- absolute I'm substracting 1lakh in all smartphones price as tem columns
 
--- SELECT ROUND(SQRT(resolution_width * resolution_width + resolution_height * resolution_height)/ screen_size, 2) AS 'PPI'  -- if want 2 decimal value we wrie , 2
+SELECT ROUND(SQRT(resolution_width * resolution_width + resolution_height * resolution_height)/ screen_size, 2) AS 'PPI'  -- if want 2 decimal value we wrie , 2
 
--- SELECT CEIL(screen_size) FROM campusx.smartphones;
--- SELECT FLOOR(screen_size) FROM campusx.smartphones;
+SELECT CEIL(screen_size) FROM campusx.smartphones;
+SELECT FLOOR(screen_size) FROM campusx.smartphones;
 -----------  L- 33    -----------------------------------
 -- SELECT * FROM campusx.smartphones WHERE brand_name = 'samsung'
 -- ORDER BY screen_size DESC 
